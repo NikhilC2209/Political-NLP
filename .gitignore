@@ -1,0 +1,5 @@
+keys.txt
+.env
+training.csv
+__pycache__
+data/
