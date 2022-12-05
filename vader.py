@@ -64,4 +64,4 @@ for i in range(ax.shape[0]):
         label =  leader_sentiment[leader_sentiment['Username'] ==leaders[count]].sentiment
         ax[i,j].pie(number_count, labels = label, autopct='%.1f%%' )
         ax[i,j].set_title(leaders[count])
-plt.savefig(one_level_up + '\\report_graph\\sentiment_analysis')
+#plt.savefig(one_level_up + '\\report_graph\\sentiment_analysis')

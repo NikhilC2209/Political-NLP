@@ -44,22 +44,22 @@ for i in range(0,len(final_df)):
 
 sns.distplot(final_df[final_df['Party']=='BJP'].read_score, label = 'BJP')
 sns.distplot(final_df[final_df['Party']=='INC'].read_score, label = 'INC')
-plt.title('ARI score of republican vs democrats')
+plt.title('ARI score of BJP vs INC')
 plt.legend()
 plt.legend()
 plt.xlim(-10,25)
 
-from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
-#%matplotlib inline
+# from wordcloud import WordCloud, STOPWORDS , ImageColorGenerator
+# #%matplotlib inline
 
-politican = ['narendramodi']
-plot = []
-stopwords = set(STOPWORDS)
-for idx, name in enumerate(politican):
-    politican_df = final_df[final_df['Username'] == name] 
-    politican_df_tweet = " ".join(review for review in politican_df.Text)
-    wordcloud = WordCloud(max_font_size=50, max_words=100, stopwords=stopwords, background_color="white").generate(politican_df_tweet)
-    plt.imshow(wordcloud)
+# politican = ['narendramodi']
+# plot = []
+# stopwords = set(STOPWORDS)
+# for idx, name in enumerate(politican):
+#     politican_df = final_df[final_df['Username'] == name] 
+#     politican_df_tweet = " ".join(review for review in politican_df.Text)
+#     wordcloud = WordCloud(max_font_size=50, max_words=100, stopwords=stopwords, background_color="white").generate(politican_df_tweet)
+#     plt.imshow(wordcloud)
     # plot.append(wordcloud)
  
 # fig, axs = plt.subplots(4, 2 , figsize  = (30,30))

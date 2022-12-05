@@ -33,3 +33,8 @@ df=pd.DataFrame(X_train, columns=['Text'])
 df["Sentiment"] = y_train
 df["Sentiment"] = df["Sentiment"].astype('category')
 df["Target"] = df["Sentiment"].cat.codes
+
+df.to_csv("dynasent.csv")
+
+def load_dynasent():
+    return df
