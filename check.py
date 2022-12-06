@@ -22,12 +22,16 @@
 # 	print("Valid")
 
 import tweepy
-  
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # assign the values accordingly
-consumer_key = "sXamfCxIwyWVmZaC4qSqGCVTI"
-consumer_secret = "oEMfLlQtnX2WL8C6OPqHs8RjI8597R2rblnkqv8MXx5VQzZ4Eb"
-access_token = "1498242203075768320-pMwfs1ru1EtYvUSszo0KS1UEWz0mfp"
-access_token_secret = "vompbgEtQ3jYM0WPYvVHX27SvEPDXoFZzee8nAv9KjeuE"
+consumer_key = os.getenv("API_Key")
+consumer_secret = os.getenv("API_Key_Secret")
+access_token = os.getenv("Access_Token")
+access_token_secret = os.getenv("Access_Token_Secret")
   
 # authorization of consumer key and consumer secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret, access_token, access_token_secret)
